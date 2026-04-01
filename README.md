@@ -18,6 +18,8 @@ The task is to produce the next assistant answer for an AdvancedIF conversation 
 - `advancedif_iter_skill.py`: iterative env entrypoint with direct `load_environment`
 - `advancedif_rlm_skill.py`: RLM env entrypoint with direct `load_environment`
 - `sequence_runner.py`: carryover + frozen-transfer rollout logic and CLI
+- `run_initial_study.py`: prints or writes the recommended narrow first-pass study
+- `run_study.py`: runs the study end-to-end and writes `report.md` plus `study_summary.json`
 - `run_research_suite.py`: prints or writes the full study command list (same as [Research suite commands](#research-suite-commands) below)
 - `configs/eval/`: `prime eval run` configs
 - `configs/gepa/`: `prime gepa run` configs
@@ -54,6 +56,57 @@ uv run python sequence_runner.py \
   --model openai/gpt-4.1-mini \
   --judge-model z-ai/glm-4.7
 ```
+
+Recommended initial study:
+
+```bash
+uv run python run_initial_study.py
+```
+
+Run the actual study and produce the analysis markdown:
+
+```bash
+uv run python run_study.py
+```
+
+## Recommended First Study
+
+Start narrower than the full suite.
+
+Use one matched comparison first:
+
+- same policy model in both harnesses
+- `score_only` feedback
+- `main_eval` split
+- same judge model
+
+Recommended order:
+
+1. Run `advancedif_iter_skill` vs `advancedif_rlm_skill` on `score_only`.
+2. Compare `criterion_satisfaction_mean`, `first_submission_lift_mean`, and `reward_per_1k_tokens_mean`.
+3. Run carryover + frozen-transfer only on the more promising harness.
+4. Run GEPA afterward if the iterative baseline remains competitive enough to be a meaningful prompt-only comparator.
+
+You can print or write that exact command list with:
+
+```bash
+uv run python run_initial_study.py
+uv run python run_initial_study.py -o /path/to/initial_study.md
+```
+
+To actually execute the study and write the final analysis report:
+
+```bash
+uv run python run_study.py
+```
+
+That command creates a timestamped directory under `outputs/studies/` containing:
+
+- generated study-local configs
+- command logs
+- saved eval and sequence artifacts
+- `study_summary.json`
+- `report.md`
 
 ## Research suite commands
 
@@ -153,4 +206,3 @@ Primary comparisons:
 
 - `gepa_minus_iter = GEPA criterion_satisfaction_mean - iterative baseline criterion_satisfaction_mean`
 - `gepa_minus_rlm = GEPA criterion_satisfaction_mean - RLM criterion_satisfaction_mean`
-

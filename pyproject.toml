@@ -29,6 +29,8 @@ only-include = [
     "advancedif_iter_skill.py",
     "advancedif_rlm_skill.py",
     "sequence_runner.py",
+    "run_initial_study.py",
+    "run_study.py",
     "run_research_suite.py",
     "core",
 ]
@@ -54,6 +56,8 @@ src = [
     "advancedif_iter_skill.py",
     "advancedif_rlm_skill.py",
     "sequence_runner.py",
+    "run_initial_study.py",
+    "run_study.py",
     "run_research_suite.py",
     "core",
     "tests",
