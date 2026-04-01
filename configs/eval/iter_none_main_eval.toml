@@ -1,0 +1,21 @@
+model = "openai/gpt-4.1-mini"
+api_base_url = "https://api.pinference.ai/api/v1"
+api_key_var = "PRIME_API_KEY"
+num_examples = 90
+rollouts_per_example = 1
+max_concurrent = 16
+save_results = true
+env_dir_path = "."
+
+[[eval]]
+env_id = "advancedif_iter_skill"
+
+[eval.sampling_args]
+temperature = 0.2
+
+[eval.env_args]
+benchmark_split = "main_eval"
+feedback_mode = "none"
+allow_skill_updates = true
+judge_model = "z-ai/glm-4.7"
+max_turns = 6

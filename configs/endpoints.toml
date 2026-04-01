@@ -1,0 +1,17 @@
+# OpenAI-compatible endpoints for `prime eval` / GEPA. The eval CLI looks up
+# `model` from your TOML against `endpoint_id` here (same string).
+# Requires PRIME_API_KEY in the environment for Pinference routes.
+
+[[endpoint]]
+endpoint_id = "z-ai/glm-4.7"
+model = "z-ai/glm-4.7"
+url = "https://api.pinference.ai/api/v1"
+key = "PRIME_API_KEY"
+type = "openai_chat_completions"
+
+[[endpoint]]
+endpoint_id = "openai/gpt-4.1-mini"
+model = "openai/gpt-4.1-mini"
+url = "https://api.pinference.ai/api/v1"
+key = "PRIME_API_KEY"
+type = "openai_chat_completions"

@@ -1,0 +1,21 @@
+model = "openai/gpt-4.1-mini"
+reflection_model = "openai/gpt-4.1-mini"
+api_base_url = "https://api.pinference.ai/api/v1"
+api_key_var = "PRIME_API_KEY"
+env_dir_path = "."
+
+[env]
+env_id = "advancedif_iter_skill"
+env_args = { benchmark_split = "dev_gepa", feedback_mode = "score_only", allow_skill_updates = true, judge_model = "z-ai/glm-4.7", max_turns = 6, initial_skill_markdown = "" }
+
+[gepa]
+max_calls = 120
+num_train = 45
+num_val = 45
+minibatch_size = 3
+state_columns = ["criterion_vector", "judge_history", "first_submission_score"]
+
+[execution]
+max_concurrent = 8
+seed = 7
+sampling_args = { temperature = 0.2 }

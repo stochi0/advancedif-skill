@@ -1,0 +1,29 @@
+max_steps = 100
+seq_len = 8192
+
+[deployment]
+num_train_gpus = 4
+num_infer_gpus = 4
+
+[model]
+name = "openai/gpt-4.1-mini"
+
+[wandb]
+project = "advancedif-skill-benchmark"
+name = "stub-do-not-run-yet"
+
+[orchestrator]
+batch_size = 128
+rollouts_per_example = 8
+
+[[orchestrator.env]]
+id = "advancedif_iter_skill"
+args = { benchmark_split = "main_eval", feedback_mode = "score_only", allow_skill_updates = true, judge_model = "z-ai/glm-4.7", max_turns = 6 }
+
+[orchestrator.eval]
+interval = 25
+
+[[orchestrator.eval.env]]
+id = "advancedif_iter_skill"
+rollouts_per_example = 1
+args = { benchmark_split = "main_eval", feedback_mode = "score_only", allow_skill_updates = true, judge_model = "z-ai/glm-4.7", max_turns = 6 }
