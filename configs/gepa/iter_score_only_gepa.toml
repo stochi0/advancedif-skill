@@ -9,10 +9,10 @@ env_id = "advancedif_iter_skill"
 env_args = { benchmark_split = "dev_gepa", feedback_mode = "score_only", allow_skill_updates = true, judge_model = "z-ai/glm-4.7", max_turns = 6, initial_skill_markdown = "" }
 
 [gepa]
-max_calls = 120
-num_train = 4
-num_val = 4
-minibatch_size = 3
+max_calls = 1
+num_train = 1
+num_val = 1
+minibatch_size = 1
 state_columns = ["criterion_vector", "judge_history", "first_submission_score"]
 
 [execution]
