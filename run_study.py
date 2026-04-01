@@ -9,7 +9,7 @@ import subprocess
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
-from statistics import mean, pstdev
+from statistics import mean
 from typing import Any
 
 from core.skill_artifact import skill_word_count
@@ -319,9 +319,7 @@ def summarize_eval_run(label: str, run_dir: Path) -> EvalRunSummary:
         if "example_id" in row
     }
     paired_efficiency = {
-        int(row["example_id"]): reward_per_1k_from_row(row)
-        for row in rows
-        if "example_id" in row
+        int(row["example_id"]): reward_per_1k_from_row(row) for row in rows if "example_id" in row
     }
 
     return EvalRunSummary(
@@ -369,17 +367,11 @@ def summarize_sequence_run(
     transfer_lifts = [transfer_frozen[key] - transfer_control[key] for key in transfer_keys]
 
     task_indices = sorted(
-        {
-            int(row["task_index"])
-            for row in carry_rows
-            if row.get("task_index") is not None
-        }
+        {int(row["task_index"]) for row in carry_rows if row.get("task_index") is not None}
     )
     task_summaries: list[dict[str, float]] = []
     for task_index in task_indices:
-        rows_at_index = [
-            row for row in carry_rows if int(row.get("task_index", -1)) == task_index
-        ]
+        rows_at_index = [row for row in carry_rows if int(row.get("task_index", -1)) == task_index]
         task_summaries.append(
             {
                 "task_index": float(task_index),
@@ -397,10 +389,7 @@ def summarize_sequence_run(
         )
 
     skill_length_slope = linear_slope(
-        [
-            (summary["task_index"], summary["skill_word_count_mean"])
-            for summary in task_summaries
-        ]
+        [(summary["task_index"], summary["skill_word_count_mean"]) for summary in task_summaries]
     )
     carryover_reward_slope = linear_slope(
         [
@@ -422,7 +411,9 @@ def summarize_sequence_run(
         results_path=results_path,
         carryover_reward_mean=mean_or_zero([float(row.get("reward") or 0.0) for row in carry_rows]),
         transfer_frozen_mean=mean_or_zero([float(row.get("reward") or 0.0) for row in frozen_rows]),
-        transfer_control_mean=mean_or_zero([float(row.get("reward") or 0.0) for row in control_rows]),
+        transfer_control_mean=mean_or_zero(
+            [float(row.get("reward") or 0.0) for row in control_rows]
+        ),
         transfer_lift_mean=mean_or_zero(transfer_lifts),
         transfer_pairs=len(transfer_lifts),
         task_summaries=task_summaries,
@@ -461,9 +452,7 @@ def summarize_gepa_run(run_dir: Path) -> GepaRunSummary:
 
 
 def compare_eval_runs(iter_summary: EvalRunSummary, rlm_summary: EvalRunSummary) -> dict[str, Any]:
-    paired_example_ids = sorted(
-        set(iter_summary.paired_rewards) & set(rlm_summary.paired_rewards)
-    )
+    paired_example_ids = sorted(set(iter_summary.paired_rewards) & set(rlm_summary.paired_rewards))
     reward_deltas = [
         rlm_summary.paired_rewards[example_id] - iter_summary.paired_rewards[example_id]
         for example_id in paired_example_ids
@@ -507,7 +496,9 @@ def verdict_from_delta(
     positive_threshold: float,
     negative_threshold: float | None = None,
 ) -> str:
-    negative_threshold = negative_threshold if negative_threshold is not None else -positive_threshold
+    negative_threshold = (
+        negative_threshold if negative_threshold is not None else -positive_threshold
+    )
     if delta >= positive_threshold:
         return "Yes"
     if delta <= negative_threshold:
@@ -678,12 +669,10 @@ def build_report_markdown(
         )
     else:
         gepa_minus_iter = (
-            gepa_eval_summary.criterion_satisfaction_mean
-            - iter_summary.criterion_satisfaction_mean
+            gepa_eval_summary.criterion_satisfaction_mean - iter_summary.criterion_satisfaction_mean
         )
         gepa_minus_rlm = (
-            gepa_eval_summary.criterion_satisfaction_mean
-            - rlm_summary.criterion_satisfaction_mean
+            gepa_eval_summary.criterion_satisfaction_mean - rlm_summary.criterion_satisfaction_mean
         )
         lines.extend(
             [
@@ -695,8 +684,8 @@ def build_report_markdown(
                     f"{gepa_minus_rlm:.4f}."
                 ),
                 (
-                    f"- GEPA best validation score: "
-                    f"{gepa_run_summary.best_score:.4f}" if gepa_run_summary.best_score is not None
+                    f"- GEPA best validation score: {gepa_run_summary.best_score:.4f}"
+                    if gepa_run_summary.best_score is not None
                     else "- GEPA best validation score: unavailable."
                 ),
             ]
@@ -835,8 +824,12 @@ def main() -> None:
         log_path=logs_dir / "rlm_eval.log",
     )
 
-    iter_run_dir = find_latest_run_dir(study_dir / "evals" / model_dir_name("advancedif_iter_skill", args.model))
-    rlm_run_dir = find_latest_run_dir(study_dir / "evals" / model_dir_name("advancedif_rlm_skill", args.model))
+    iter_run_dir = find_latest_run_dir(
+        study_dir / "evals" / model_dir_name("advancedif_iter_skill", args.model)
+    )
+    rlm_run_dir = find_latest_run_dir(
+        study_dir / "evals" / model_dir_name("advancedif_rlm_skill", args.model)
+    )
     iter_summary = summarize_eval_run("iterative", iter_run_dir)
     rlm_summary = summarize_eval_run("rlm", rlm_run_dir)
     comparison = compare_eval_runs(iter_summary, rlm_summary)
@@ -953,7 +946,9 @@ def main() -> None:
         "gepa_eval_summary": None if gepa_eval_summary is None else gepa_eval_summary.__dict__,
     }
     summary_json_path = study_dir / "study_summary.json"
-    summary_json_path.write_text(json.dumps(summary_payload, indent=2, default=str), encoding="utf-8")
+    summary_json_path.write_text(
+        json.dumps(summary_payload, indent=2, default=str), encoding="utf-8"
+    )
 
     report_text = build_report_markdown(
         study_name="AdvancedIF Initial Study Report",
