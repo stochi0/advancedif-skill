@@ -1,7 +1,5 @@
 # AdvancedIF Skill Benchmark
 
-AdvancedIF answer-refinement benchmark built in the `experiments` workspace.
-
 It compares:
 
 - `advancedif_iter_skill`: iterative tool-using baseline

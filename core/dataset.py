@@ -79,8 +79,6 @@ def build_benchmark_splits(cfg: EnvironmentConfig) -> BenchmarkSplits:
         if example.benchmark_name in grouped:
             grouped[example.benchmark_name].append(example)
 
-    for regime, required_count in PILOT_SPLIT_COUNTS.items():
-        _ = required_count
     total_required = sum(PILOT_SPLIT_COUNTS.values())
     for regime in BENCHMARK_REGIMES:
         regime_examples = grouped[regime]

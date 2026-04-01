@@ -92,15 +92,3 @@ Return one JSON object with exactly this key:
 Use a strict standard. Partial or vague satisfaction should be marked false.
 Return JSON only.
 """
-
-
-SKILL_META_JUDGE_PROMPT = """Score this markdown skill artifact for abstraction and reusability on future instruction-following tasks.
-
-Return one JSON object with integer scores from 1 to 5 for:
-- "abstraction"
-- "reusability"
-- "specificity_balance"
-
-Skill:
-{skill_markdown}
-"""
