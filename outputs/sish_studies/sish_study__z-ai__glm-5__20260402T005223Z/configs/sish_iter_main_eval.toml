@@ -1,0 +1,26 @@
+model = "z-ai/glm-5"
+api_base_url = "https://api.pinference.ai/api/v1"
+api_key_var = "PRIME_API_KEY"
+num_examples = 2
+rollouts_per_example = 1
+max_concurrent = 48
+save_results = true
+output_dir = "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/sish_studies/sish_study__z-ai__glm-5__20260402T005223Z"
+env_dir_path = "."
+
+[[eval]]
+env_id = "sish_iter_skill"
+
+[eval.sampling_args]
+temperature = 0.2
+
+[eval.env_args]
+config_path = "task_configs/hard_256k_one_per_family.json"
+max_examples = 2
+seed = 7
+shuffle = false
+feedback_mode = "score_only"
+allow_skill_updates = true
+judge_model = "z-ai/glm-5"
+max_turns = 6
+output_root = "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/sish_studies/sish_study__z-ai__glm-5__20260402T005223Z"

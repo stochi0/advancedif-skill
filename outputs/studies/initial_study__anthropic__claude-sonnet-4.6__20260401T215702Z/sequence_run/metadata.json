@@ -1,0 +1,8 @@
+{
+  "env": "advancedif_iter_skill",
+  "model": "anthropic/claude-sonnet-4.6",
+  "feedback_mode": "one_violation",
+  "system_prompt_strategy": "baseline",
+  "output_file": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__anthropic__claude-sonnet-4.6__20260401T215702Z/sequence_run/outputs.jsonl",
+  "record_count": 18
+}

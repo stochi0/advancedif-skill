@@ -1,0 +1,8 @@
+{
+  "env": "advancedif_rlm_skill",
+  "model": "PrimeIntellect/INTELLECT-3.1",
+  "feedback_mode": "score_only",
+  "system_prompt_strategy": "baseline",
+  "output_file": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__PrimeIntellect__INTELLECT-3.1__20260401T221010Z/sequence_run/outputs.jsonl",
+  "record_count": 15
+}

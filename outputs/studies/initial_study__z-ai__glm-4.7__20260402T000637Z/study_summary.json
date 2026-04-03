@@ -1,0 +1,110 @@
+{
+  "study_dir": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__z-ai__glm-4.7__20260402T000637Z",
+  "model": "z-ai/glm-4.7",
+  "judge_model": "deepseek/deepseek-v3.2",
+  "feedback_mode": "score_only",
+  "iter_summary": {
+    "label": "iterative",
+    "env_id": "advancedif_iter_skill",
+    "model": "z-ai/glm-4.7",
+    "run_dir": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__z-ai__glm-4.7__20260402T000637Z/evals/advancedif_iter_skill--z-ai--glm-4.7/a6f0e962",
+    "metadata_path": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__z-ai__glm-4.7__20260402T000637Z/evals/advancedif_iter_skill--z-ai--glm-4.7/a6f0e962/metadata.json",
+    "results_path": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__z-ai__glm-4.7__20260402T000637Z/evals/advancedif_iter_skill--z-ai--glm-4.7/a6f0e962/results.jsonl",
+    "num_examples": 4,
+    "criterion_satisfaction_mean": 0.7777777777777778,
+    "all_criteria_pass_rate": 0.5,
+    "first_submission_lift_mean": -0.027777777777777762,
+    "total_tokens_mean": 58606.0,
+    "reward_per_1k_tokens_mean": 0.25763596375790826,
+    "judge_calls_mean": 2.0,
+    "error_rate": 0.0,
+    "paired_rewards": {
+      "45": 1.0,
+      "325": 0.5555555555555556,
+      "336": 0.5555555555555556,
+      "364": 1.0
+    },
+    "paired_efficiency": {
+      "45": 0.37105751391465674,
+      "325": 0.31655587211142766,
+      "336": 0.0024469824546464037,
+      "364": 0.34048348655090227
+    }
+  },
+  "rlm_summary": {
+    "label": "rlm",
+    "env_id": "advancedif_rlm_skill",
+    "model": "z-ai/glm-4.7",
+    "run_dir": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__z-ai__glm-4.7__20260402T000637Z/evals/advancedif_rlm_skill--z-ai--glm-4.7/5ca6e9dd",
+    "metadata_path": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__z-ai__glm-4.7__20260402T000637Z/evals/advancedif_rlm_skill--z-ai--glm-4.7/5ca6e9dd/metadata.json",
+    "results_path": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__z-ai__glm-4.7__20260402T000637Z/evals/advancedif_rlm_skill--z-ai--glm-4.7/5ca6e9dd/results.jsonl",
+    "num_examples": 4,
+    "criterion_satisfaction_mean": 0.6166666666666667,
+    "all_criteria_pass_rate": 0.25,
+    "first_submission_lift_mean": 0.0,
+    "total_tokens_mean": 11902.5,
+    "reward_per_1k_tokens_mean": 0.04970705207459633,
+    "judge_calls_mean": 0.25,
+    "error_rate": 0.0,
+    "paired_rewards": {
+      "45": 0.8,
+      "325": 1.0,
+      "336": 0.6666666666666666,
+      "364": 0.0
+    },
+    "paired_efficiency": {
+      "45": 0.05637773079633545,
+      "325": 0.08097821685966475,
+      "336": 0.06147226064238512,
+      "364": 0.0
+    }
+  },
+  "comparison": {
+    "paired_examples": 4,
+    "reward_delta_rlm_minus_iter": -0.16111111111111112,
+    "reward_delta_ci95": [
+      -0.7668244171012453,
+      0.4446021948790231
+    ],
+    "efficiency_delta_rlm_minus_iter": -0.20792891168331193,
+    "efficiency_delta_ci95": [
+      -0.38773995723613064,
+      -0.028117866130493246
+    ],
+    "rlm_reward_win_rate": 0.5,
+    "rlm_efficiency_win_rate": 0.25
+  },
+  "sequence_env": "advancedif_iter_skill",
+  "sequence_summary": {
+    "env_id": "advancedif_iter_skill",
+    "output_dir": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__z-ai__glm-4.7__20260402T000637Z/sequence_run",
+    "metadata_path": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__z-ai__glm-4.7__20260402T000637Z/sequence_run/metadata.json",
+    "results_path": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__z-ai__glm-4.7__20260402T000637Z/sequence_run/outputs.jsonl",
+    "carryover_reward_mean": 0.9166666666666667,
+    "transfer_frozen_mean": 0.5,
+    "transfer_control_mean": 0.9285714285714286,
+    "transfer_lift_mean": -0.42857142857142855,
+    "transfer_pairs": 2,
+    "task_summaries": [
+      {
+        "task_index": 0.0,
+        "count": 1.0,
+        "skill_word_count_mean": 126.0,
+        "criterion_satisfaction_mean": 0.8333333333333334,
+        "first_submission_lift_mean": 0.0
+      },
+      {
+        "task_index": 1.0,
+        "count": 1.0,
+        "skill_word_count_mean": 126.0,
+        "criterion_satisfaction_mean": 1.0,
+        "first_submission_lift_mean": 0.0
+      }
+    ],
+    "skill_length_slope": 0.0,
+    "carryover_reward_slope": 0.16666666666666663,
+    "first_submission_lift_slope": 0.0
+  },
+  "gepa_run_summary": null,
+  "gepa_eval_summary": null
+}

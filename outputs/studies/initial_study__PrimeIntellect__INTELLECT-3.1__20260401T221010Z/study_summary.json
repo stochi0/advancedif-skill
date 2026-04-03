@@ -1,0 +1,160 @@
+{
+  "study_dir": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__PrimeIntellect__INTELLECT-3.1__20260401T221010Z",
+  "model": "PrimeIntellect/INTELLECT-3.1",
+  "judge_model": "z-ai/glm-4.7",
+  "feedback_mode": "score_only",
+  "iter_summary": {
+    "label": "iterative",
+    "env_id": "advancedif_iter_skill",
+    "model": "PrimeIntellect/INTELLECT-3.1",
+    "run_dir": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__PrimeIntellect__INTELLECT-3.1__20260401T221010Z/evals/advancedif_iter_skill--PrimeIntellect--INTELLECT-3.1/72792d72",
+    "metadata_path": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__PrimeIntellect__INTELLECT-3.1__20260401T221010Z/evals/advancedif_iter_skill--PrimeIntellect--INTELLECT-3.1/72792d72/metadata.json",
+    "results_path": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__PrimeIntellect__INTELLECT-3.1__20260401T221010Z/evals/advancedif_iter_skill--PrimeIntellect--INTELLECT-3.1/72792d72/results.jsonl",
+    "num_examples": 3,
+    "criterion_satisfaction_mean": 0.9259259259259259,
+    "all_criteria_pass_rate": 0.3333333333333333,
+    "first_submission_lift_mean": 0.0,
+    "total_tokens_mean": 8016.333333333333,
+    "reward_per_1k_tokens_mean": 0.1232023695393552,
+    "judge_calls_mean": 1.0,
+    "error_rate": 0.0,
+    "paired_rewards": {
+      "45": 1.0,
+      "325": 0.8888888888888888,
+      "336": 0.8888888888888888
+    },
+    "paired_efficiency": {
+      "45": 0.1701258931609391,
+      "325": 0.08595773028613178,
+      "336": 0.11352348517099474
+    }
+  },
+  "rlm_summary": {
+    "label": "rlm",
+    "env_id": "advancedif_rlm_skill",
+    "model": "PrimeIntellect/INTELLECT-3.1",
+    "run_dir": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__PrimeIntellect__INTELLECT-3.1__20260401T221010Z/evals/advancedif_rlm_skill--PrimeIntellect--INTELLECT-3.1/f89d9cdc",
+    "metadata_path": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__PrimeIntellect__INTELLECT-3.1__20260401T221010Z/evals/advancedif_rlm_skill--PrimeIntellect--INTELLECT-3.1/f89d9cdc/metadata.json",
+    "results_path": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__PrimeIntellect__INTELLECT-3.1__20260401T221010Z/evals/advancedif_rlm_skill--PrimeIntellect--INTELLECT-3.1/f89d9cdc/results.jsonl",
+    "num_examples": 3,
+    "criterion_satisfaction_mean": 0.0,
+    "all_criteria_pass_rate": 0.0,
+    "first_submission_lift_mean": 0.0,
+    "total_tokens_mean": 2960.3333333333335,
+    "reward_per_1k_tokens_mean": 0.0,
+    "judge_calls_mean": 1.0,
+    "error_rate": 0.0,
+    "paired_rewards": {
+      "45": 0.0,
+      "325": 0.0,
+      "336": 0.0
+    },
+    "paired_efficiency": {
+      "45": 0.0,
+      "325": 0.0,
+      "336": 0.0
+    }
+  },
+  "comparison": {
+    "paired_examples": 3,
+    "reward_delta_rlm_minus_iter": -0.9259259259259259,
+    "reward_delta_ci95": [
+      -0.9985185185185186,
+      -0.8533333333333333
+    ],
+    "efficiency_delta_rlm_minus_iter": -0.1232023695393552,
+    "efficiency_delta_ci95": [
+      -0.17176042859036983,
+      -0.0746443104883406
+    ],
+    "rlm_reward_win_rate": 0.0,
+    "rlm_efficiency_win_rate": 0.0
+  },
+  "sequence_env": "advancedif_rlm_skill",
+  "sequence_summary": {
+    "env_id": "advancedif_rlm_skill",
+    "output_dir": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__PrimeIntellect__INTELLECT-3.1__20260401T221010Z/sequence_run",
+    "metadata_path": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__PrimeIntellect__INTELLECT-3.1__20260401T221010Z/sequence_run/metadata.json",
+    "results_path": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__PrimeIntellect__INTELLECT-3.1__20260401T221010Z/sequence_run/outputs.jsonl",
+    "carryover_reward_mean": 0.01818181818181818,
+    "transfer_frozen_mean": 0.0,
+    "transfer_control_mean": 0.0,
+    "transfer_lift_mean": 0.0,
+    "transfer_pairs": 5,
+    "task_summaries": [
+      {
+        "task_index": 0.0,
+        "count": 1.0,
+        "skill_word_count_mean": 126.0,
+        "criterion_satisfaction_mean": 0.0,
+        "first_submission_lift_mean": 0.0
+      },
+      {
+        "task_index": 1.0,
+        "count": 1.0,
+        "skill_word_count_mean": 126.0,
+        "criterion_satisfaction_mean": 0.0,
+        "first_submission_lift_mean": 0.0
+      },
+      {
+        "task_index": 2.0,
+        "count": 1.0,
+        "skill_word_count_mean": 126.0,
+        "criterion_satisfaction_mean": 0.09090909090909091,
+        "first_submission_lift_mean": 0.0
+      },
+      {
+        "task_index": 3.0,
+        "count": 1.0,
+        "skill_word_count_mean": 126.0,
+        "criterion_satisfaction_mean": 0.0,
+        "first_submission_lift_mean": 0.0
+      },
+      {
+        "task_index": 4.0,
+        "count": 1.0,
+        "skill_word_count_mean": 126.0,
+        "criterion_satisfaction_mean": 0.0,
+        "first_submission_lift_mean": 0.0
+      }
+    ],
+    "skill_length_slope": 0.0,
+    "carryover_reward_slope": 0.0,
+    "first_submission_lift_slope": 0.0
+  },
+  "gepa_run_summary": {
+    "run_dir": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__PrimeIntellect__INTELLECT-3.1__20260401T221010Z/gepa_run",
+    "metadata_path": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__PrimeIntellect__INTELLECT-3.1__20260401T221010Z/gepa_run/metadata.json",
+    "best_prompt_path": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__PrimeIntellect__INTELLECT-3.1__20260401T221010Z/gepa_run/best_prompt.txt",
+    "best_prompt": "You are completing the next assistant turn for an AdvancedIF conversation.\n\nYour job is to produce a final assistant answer that satisfies as many hidden rubric criteria as possible.\n\nYou have two tools:\n- `submit_candidate_answer(candidate_answer)`: get restricted hidden-judge feedback on a draft answer.\n- `update_skill(skill_markdown)`: update the carried markdown skill artifact that may help on later tasks.\n\nUse the conversation history exactly as given. Respect all earlier system instructions and carried context.\nWhen you are ready, return the final assistant answer directly in natural language. Do not wrap it in JSON unless the conversation itself asks for JSON.\n",
+    "best_score": 0.8333333333333334,
+    "num_candidates": 1,
+    "total_metric_calls": 1
+  },
+  "gepa_eval_summary": {
+    "label": "gepa_main_eval",
+    "env_id": "advancedif_iter_skill",
+    "model": "PrimeIntellect/INTELLECT-3.1",
+    "run_dir": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__PrimeIntellect__INTELLECT-3.1__20260401T221010Z/evals/advancedif_iter_skill--PrimeIntellect--INTELLECT-3.1/4c19e1e1",
+    "metadata_path": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__PrimeIntellect__INTELLECT-3.1__20260401T221010Z/evals/advancedif_iter_skill--PrimeIntellect--INTELLECT-3.1/4c19e1e1/metadata.json",
+    "results_path": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__PrimeIntellect__INTELLECT-3.1__20260401T221010Z/evals/advancedif_iter_skill--PrimeIntellect--INTELLECT-3.1/4c19e1e1/results.jsonl",
+    "num_examples": 3,
+    "criterion_satisfaction_mean": 0.8962962962962963,
+    "all_criteria_pass_rate": 0.3333333333333333,
+    "first_submission_lift_mean": 0.0,
+    "total_tokens_mean": 8200.333333333334,
+    "reward_per_1k_tokens_mean": 0.12033124169708238,
+    "judge_calls_mean": 1.0,
+    "error_rate": 0.0,
+    "paired_rewards": {
+      "45": 0.8,
+      "325": 1.0,
+      "336": 0.8888888888888888
+    },
+    "paired_efficiency": {
+      "45": 0.10174233753020476,
+      "325": 0.17969451931716082,
+      "336": 0.07955686824388157
+    }
+  }
+}

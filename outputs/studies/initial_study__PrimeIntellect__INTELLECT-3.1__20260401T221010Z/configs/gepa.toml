@@ -1,0 +1,29 @@
+model = "PrimeIntellect/INTELLECT-3.1"
+reflection_model = "PrimeIntellect/INTELLECT-3.1"
+api_base_url = "https://api.pinference.ai/api/v1"
+api_key_var = "PRIME_API_KEY"
+env_dir_path = "."
+run_dir = "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__PrimeIntellect__INTELLECT-3.1__20260401T221010Z/gepa_run"
+save_results = true
+
+[env]
+env_id = "advancedif_iter_skill"
+[env.env_args]
+benchmark_split = "dev_gepa"
+feedback_mode = "score_only"
+allow_skill_updates = true
+judge_model = "z-ai/glm-4.7"
+max_turns = 6
+initial_skill_markdown = ""
+
+[gepa]
+max_calls = 1
+num_train = 1
+num_val = 1
+minibatch_size = 1
+state_columns = ["criterion_vector", "judge_history", "first_submission_score"]
+
+[execution]
+max_concurrent = 32
+seed = 7
+sampling_args = { temperature = 0.2 }

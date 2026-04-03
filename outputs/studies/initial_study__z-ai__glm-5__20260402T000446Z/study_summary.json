@@ -1,0 +1,95 @@
+{
+  "study_dir": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__z-ai__glm-5__20260402T000446Z",
+  "model": "z-ai/glm-5",
+  "judge_model": "z-ai/glm-5",
+  "feedback_mode": "none",
+  "iter_summary": {
+    "label": "iterative",
+    "env_id": "advancedif_iter_skill",
+    "model": "z-ai/glm-5",
+    "run_dir": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__z-ai__glm-5__20260402T000446Z/evals/advancedif_iter_skill--z-ai--glm-5/82e1c1f0",
+    "metadata_path": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__z-ai__glm-5__20260402T000446Z/evals/advancedif_iter_skill--z-ai--glm-5/82e1c1f0/metadata.json",
+    "results_path": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__z-ai__glm-5__20260402T000446Z/evals/advancedif_iter_skill--z-ai--glm-5/82e1c1f0/results.jsonl",
+    "num_examples": 2,
+    "criterion_satisfaction_mean": 0.8888888888888888,
+    "all_criteria_pass_rate": 0.0,
+    "first_submission_lift_mean": 0.0,
+    "total_tokens_mean": 5075.0,
+    "reward_per_1k_tokens_mean": 0.18270560166239413,
+    "judge_calls_mean": 1.0,
+    "error_rate": 0.0,
+    "paired_rewards": {
+      "325": 0.8888888888888888,
+      "336": 0.8888888888888888
+    },
+    "paired_efficiency": {
+      "325": 0.14555246256572602,
+      "336": 0.21985874075906228
+    }
+  },
+  "rlm_summary": {
+    "label": "rlm",
+    "env_id": "advancedif_rlm_skill",
+    "model": "z-ai/glm-5",
+    "run_dir": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__z-ai__glm-5__20260402T000446Z/evals/advancedif_rlm_skill--z-ai--glm-5/20659ed9",
+    "metadata_path": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__z-ai__glm-5__20260402T000446Z/evals/advancedif_rlm_skill--z-ai--glm-5/20659ed9/metadata.json",
+    "results_path": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__z-ai__glm-5__20260402T000446Z/evals/advancedif_rlm_skill--z-ai--glm-5/20659ed9/results.jsonl",
+    "num_examples": 2,
+    "criterion_satisfaction_mean": 0.5,
+    "all_criteria_pass_rate": 0.5,
+    "first_submission_lift_mean": 0.0,
+    "total_tokens_mean": 11074.0,
+    "reward_per_1k_tokens_mean": 0.06264094211976948,
+    "judge_calls_mean": 0.5,
+    "error_rate": 0.0,
+    "paired_rewards": {
+      "325": 0.0,
+      "336": 1.0
+    },
+    "paired_efficiency": {
+      "325": 0.0,
+      "336": 0.12528188423953895
+    }
+  },
+  "comparison": {
+    "paired_examples": 2,
+    "reward_delta_rlm_minus_iter": -0.38888888888888884,
+    "reward_delta_ci95": [
+      -1.3688888888888888,
+      0.5911111111111111
+    ],
+    "efficiency_delta_rlm_minus_iter": -0.12006465954262467,
+    "efficiency_delta_ci95": [
+      -0.1700207534679033,
+      -0.07010856561734605
+    ],
+    "rlm_reward_win_rate": 0.5,
+    "rlm_efficiency_win_rate": 0.0
+  },
+  "sequence_env": "advancedif_iter_skill",
+  "sequence_summary": {
+    "env_id": "advancedif_iter_skill",
+    "output_dir": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__z-ai__glm-5__20260402T000446Z/sequence_run",
+    "metadata_path": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__z-ai__glm-5__20260402T000446Z/sequence_run/metadata.json",
+    "results_path": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__z-ai__glm-5__20260402T000446Z/sequence_run/outputs.jsonl",
+    "carryover_reward_mean": 0.0,
+    "transfer_frozen_mean": 0.0,
+    "transfer_control_mean": 0.0,
+    "transfer_lift_mean": 0.0,
+    "transfer_pairs": 1,
+    "task_summaries": [
+      {
+        "task_index": 0.0,
+        "count": 1.0,
+        "skill_word_count_mean": 126.0,
+        "criterion_satisfaction_mean": 0.0,
+        "first_submission_lift_mean": -1.0
+      }
+    ],
+    "skill_length_slope": 0.0,
+    "carryover_reward_slope": 0.0,
+    "first_submission_lift_slope": 0.0
+  },
+  "gepa_run_summary": null,
+  "gepa_eval_summary": null
+}

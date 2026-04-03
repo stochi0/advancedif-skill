@@ -1,0 +1,8 @@
+{
+  "env": "sish_iter_skill",
+  "model": "z-ai/glm-5",
+  "feedback_mode": "score_only",
+  "system_prompt_strategy": "sish_default",
+  "output_file": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/sish_studies/sish_study__z-ai__glm-5__20260402T001746Z/sequence_run/outputs.jsonl",
+  "record_count": 6
+}

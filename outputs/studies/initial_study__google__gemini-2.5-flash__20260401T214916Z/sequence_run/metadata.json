@@ -1,0 +1,8 @@
+{
+  "env": "advancedif_iter_skill",
+  "model": "google/gemini-2.5-flash",
+  "feedback_mode": "none",
+  "system_prompt_strategy": "baseline",
+  "output_file": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__google__gemini-2.5-flash__20260401T214916Z/sequence_run/outputs.jsonl",
+  "record_count": 24
+}

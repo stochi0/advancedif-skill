@@ -1,0 +1,120 @@
+{
+  "study_dir": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__openai__gpt-4.1-mini__20260402T091321Z",
+  "model": "openai/gpt-4.1-mini",
+  "judge_model": "openai/gpt-4.1-mini",
+  "feedback_mode": "score_only",
+  "iter_summary": {
+    "label": "iterative",
+    "env_id": "advancedif_iter_skill",
+    "model": "openai/gpt-4.1-mini",
+    "run_dir": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__openai__gpt-4.1-mini__20260402T091321Z/evals/advancedif_iter_skill--openai--gpt-4.1-mini/dd34b1fe",
+    "metadata_path": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__openai__gpt-4.1-mini__20260402T091321Z/evals/advancedif_iter_skill--openai--gpt-4.1-mini/dd34b1fe/metadata.json",
+    "results_path": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__openai__gpt-4.1-mini__20260402T091321Z/evals/advancedif_iter_skill--openai--gpt-4.1-mini/dd34b1fe/results.jsonl",
+    "num_examples": 1,
+    "criterion_satisfaction_mean": 1.0,
+    "all_criteria_pass_rate": 1.0,
+    "first_submission_lift_mean": 0.0,
+    "total_tokens_mean": 1708.0,
+    "reward_per_1k_tokens_mean": 0.585480093676815,
+    "judge_calls_mean": 1.0,
+    "error_rate": 0.0,
+    "paired_rewards": {
+      "336": 1.0
+    },
+    "paired_efficiency": {
+      "336": 0.585480093676815
+    }
+  },
+  "rlm_summary": {
+    "label": "rlm",
+    "env_id": "advancedif_rlm_skill",
+    "model": "openai/gpt-4.1-mini",
+    "run_dir": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__openai__gpt-4.1-mini__20260402T091321Z/evals/advancedif_rlm_skill--openai--gpt-4.1-mini/2170790d",
+    "metadata_path": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__openai__gpt-4.1-mini__20260402T091321Z/evals/advancedif_rlm_skill--openai--gpt-4.1-mini/2170790d/metadata.json",
+    "results_path": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__openai__gpt-4.1-mini__20260402T091321Z/evals/advancedif_rlm_skill--openai--gpt-4.1-mini/2170790d/results.jsonl",
+    "num_examples": 1,
+    "criterion_satisfaction_mean": 1.0,
+    "all_criteria_pass_rate": 1.0,
+    "first_submission_lift_mean": 0.0,
+    "total_tokens_mean": 11290.0,
+    "reward_per_1k_tokens_mean": 0.08857395925597875,
+    "judge_calls_mean": 1.0,
+    "error_rate": 0.0,
+    "paired_rewards": {
+      "336": 1.0
+    },
+    "paired_efficiency": {
+      "336": 0.08857395925597875
+    }
+  },
+  "comparison": {
+    "paired_examples": 1,
+    "reward_delta_rlm_minus_iter": 0.0,
+    "reward_delta_ci95": [
+      0.0,
+      0.0
+    ],
+    "efficiency_delta_rlm_minus_iter": -0.4969061344208362,
+    "efficiency_delta_ci95": [
+      -0.4969061344208362,
+      -0.4969061344208362
+    ],
+    "rlm_reward_win_rate": 0.0,
+    "rlm_efficiency_win_rate": 0.0
+  },
+  "sequence_env": "advancedif_iter_skill",
+  "sequence_summary": {
+    "env_id": "advancedif_iter_skill",
+    "output_dir": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__openai__gpt-4.1-mini__20260402T091321Z/sequence_run",
+    "metadata_path": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__openai__gpt-4.1-mini__20260402T091321Z/sequence_run/metadata.json",
+    "results_path": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__openai__gpt-4.1-mini__20260402T091321Z/sequence_run/outputs.jsonl",
+    "carryover_reward_mean": 1.0,
+    "transfer_frozen_mean": 1.0,
+    "transfer_control_mean": 1.0,
+    "transfer_lift_mean": 0.0,
+    "transfer_pairs": 1,
+    "task_summaries": [
+      {
+        "task_index": 0.0,
+        "count": 1.0,
+        "skill_word_count_mean": 126.0,
+        "criterion_satisfaction_mean": 1.0,
+        "first_submission_lift_mean": 0.0
+      }
+    ],
+    "skill_length_slope": 0.0,
+    "carryover_reward_slope": 0.0,
+    "first_submission_lift_slope": 0.0
+  },
+  "gepa_run_summary": {
+    "run_dir": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__openai__gpt-4.1-mini__20260402T091321Z/gepa_run",
+    "metadata_path": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__openai__gpt-4.1-mini__20260402T091321Z/gepa_run/metadata.json",
+    "best_prompt_path": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__openai__gpt-4.1-mini__20260402T091321Z/gepa_run/best_prompt.txt",
+    "best_prompt": "You are completing the next assistant turn for an AdvancedIF conversation.\n\nYour job is to produce a final assistant answer that satisfies as many hidden rubric criteria as possible.\n\nYou have two tools:\n- `submit_candidate_answer(candidate_answer)`: get restricted hidden-judge feedback on a draft answer.\n- `update_skill(skill_markdown)`: update the carried markdown skill artifact that may help on later tasks.\n\nUse the conversation history exactly as given. Respect all earlier system instructions and carried context.\nWhen you are ready, return the final assistant answer directly in natural language. Do not wrap it in JSON unless the conversation itself asks for JSON.\n",
+    "best_score": 1.0,
+    "num_candidates": 1,
+    "total_metric_calls": 1
+  },
+  "gepa_eval_summary": {
+    "label": "gepa_main_eval",
+    "env_id": "advancedif_iter_skill",
+    "model": "openai/gpt-4.1-mini",
+    "run_dir": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__openai__gpt-4.1-mini__20260402T091321Z/evals/advancedif_iter_skill--openai--gpt-4.1-mini/3651739f",
+    "metadata_path": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__openai__gpt-4.1-mini__20260402T091321Z/evals/advancedif_iter_skill--openai--gpt-4.1-mini/3651739f/metadata.json",
+    "results_path": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__openai__gpt-4.1-mini__20260402T091321Z/evals/advancedif_iter_skill--openai--gpt-4.1-mini/3651739f/results.jsonl",
+    "num_examples": 1,
+    "criterion_satisfaction_mean": 1.0,
+    "all_criteria_pass_rate": 1.0,
+    "first_submission_lift_mean": 0.0,
+    "total_tokens_mean": 1774.0,
+    "reward_per_1k_tokens_mean": 0.5636978579481398,
+    "judge_calls_mean": 1.0,
+    "error_rate": 0.0,
+    "paired_rewards": {
+      "336": 1.0
+    },
+    "paired_efficiency": {
+      "336": 0.5636978579481398
+    }
+  }
+}

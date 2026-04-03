@@ -1,0 +1,8 @@
+{
+  "env": "advancedif_iter_skill",
+  "model": "PrimeIntellect/Qwen3-0.6B-Reverse-Text-SFT",
+  "feedback_mode": "score_only",
+  "system_prompt_strategy": "baseline",
+  "output_file": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__PrimeIntellect__Qwen3-0.6B-Reverse-Text-SFT__20260401T215851Z/sequence_run/outputs.jsonl",
+  "record_count": 12
+}

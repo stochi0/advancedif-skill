@@ -1,0 +1,15 @@
+{
+  "satisfied": [
+    true,
+    true,
+    true,
+    true,
+    false,
+    true,
+    true,
+    true,
+    false
+  ],
+  "prompt_tokens": 504,
+  "completion_tokens": 738
+}

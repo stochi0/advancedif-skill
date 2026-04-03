@@ -1,0 +1,8 @@
+{
+  "env": "advancedif_iter_skill",
+  "model": "z-ai/glm-4.7",
+  "feedback_mode": "score_only",
+  "system_prompt_strategy": "baseline",
+  "output_file": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__z-ai__glm-4.7__20260402T000637Z/sequence_run/outputs.jsonl",
+  "record_count": 6
+}

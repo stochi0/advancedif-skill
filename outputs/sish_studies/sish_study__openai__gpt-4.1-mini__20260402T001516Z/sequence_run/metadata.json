@@ -1,0 +1,8 @@
+{
+  "env": "sish_iter_skill",
+  "model": "openai/gpt-4.1-mini",
+  "feedback_mode": "score_only",
+  "system_prompt_strategy": "sish_default",
+  "output_file": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/sish_studies/sish_study__openai__gpt-4.1-mini__20260402T001516Z/sequence_run/outputs.jsonl",
+  "record_count": 3
+}

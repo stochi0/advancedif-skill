@@ -1,0 +1,8 @@
+{
+  "env": "advancedif_iter_skill",
+  "model": "openai/gpt-4.1-mini",
+  "feedback_mode": "score_only",
+  "system_prompt_strategy": "baseline",
+  "output_file": "/Users/ayushb/home/workspaces/prime_intellect/athena/experiments/advancedif_skill_benchmark/outputs/studies/initial_study__openai__gpt-4.1-mini__20260401T174507Z/sequence_run/outputs.jsonl",
+  "record_count": 6
+}
